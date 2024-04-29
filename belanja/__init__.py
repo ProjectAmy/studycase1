@@ -1,8 +1,8 @@
 # Membuat daftar belanja dengan format OOP
 
 class daftarbelanja:
-    def __init__(self):
-        self.daftar = []
+    def __init__(self, listbelanja):
+        self.daftar = listbelanja
         self.item_baru = None
         self.index_hapus = None
         self.dihapus = None
@@ -20,6 +20,8 @@ class daftarbelanja:
         self.item_baru = input("Masukan item baru : ")
         self.daftar.append(self.item_baru)
         print(f"Item {self.item_baru} telah ditambahkan ke dalam daftar")
+        print("Ini daftar belanja anda sekarang : ")
+        self.tampilkan_daftar()
 
     def hapus_item(self):
 
@@ -33,5 +35,7 @@ class daftarbelanja:
         if 1 <= self.index_hapus <= len(self.daftar):
             self.dihapus = self.daftar.pop(self.index_hapus - 1)
             print(f"item {self.dihapus} telah dihapus dari daftar belanja anda")
+            print("Ini daftar belanja anda sekarang : ")
+            self.tampilkan_daftar()
         else:
             print("tidak ada nomer tersebut")

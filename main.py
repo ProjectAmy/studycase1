@@ -4,7 +4,8 @@ import belanja
 
 if __name__ == '__main__' :
 
-    belanjaku = belanja.daftarbelanja
+    listbelanja = []
+    belanjaku = belanja.daftarbelanja(listbelanja)
 
     while True:
 
